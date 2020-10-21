@@ -34,6 +34,7 @@ namespace prueba_para_sudoku
                         Console.WriteLine("Error: valor no valido");
                         break;
                     case 1:
+                        iokese.terminado = false;
                         iokese = iokese.GenerarPanel(iokese, generador);
                         break;
                     case 2:
