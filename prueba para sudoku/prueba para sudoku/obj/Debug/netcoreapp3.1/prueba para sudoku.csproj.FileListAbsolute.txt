@@ -1,0 +1,13 @@
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.csprojAssemblyReference.cache
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.AssemblyInfoInputs.cache
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.AssemblyInfo.cs
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.csproj.CoreCompileInputs.cache
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.exe
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.deps.json
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.runtimeconfig.json
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.runtimeconfig.dev.json
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.dll
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\bin\Debug\netcoreapp3.1\prueba para sudoku.pdb
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.dll
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.pdb
+C:\Users\okey-\source\repos\prueba para sudoku\prueba para sudoku\obj\Debug\netcoreapp3.1\prueba para sudoku.genruntimeconfig.cache

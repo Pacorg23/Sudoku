@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "prueba para sudoku": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "X": "Valor"
+      }
+    }
+  }
+}
