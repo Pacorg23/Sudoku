@@ -1,0 +1,23 @@
+﻿@model PaginaDeSudoku.viewModel.PruebadeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>paginadeprueba</title>
+</head>
+<body>
+    <div>
+        <p>@Model.juejue.message</p>
+        <p>@Model.huehue.message</p>
+        @Html.DisplayText(Model.huehue.message)
+        @Html.DisplayText(Model.juejue.message)
+        hola
+    </div>
+</body>
+</html>

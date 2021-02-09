@@ -1,0 +1,76 @@
+﻿@model PaginaDeSudoku.Models.Sudoku
+ 
+@{
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "yoquese"
+    };
+}
+<div>
+    @{
+        for (int i = 0; i < 9; i++)
+        {
+            if (((i + 1) % 3) == 0)
+            {
+                <div class="barra_contenedora sexto">
+                    @for (int j = 0; j < 9; j++)
+                    {
+                        if (((j + 1) % 3) == 0)
+                        {
+                            <div class="recuadro_pequeño tercero">
+                                @using (Ajax.BeginForm("seleccionar", "controlbase", ajaxOptions))
+                                {
+
+                                    <button style="background-color: @Model.color[i,j]" class="relleno" name="casilla" value=@((i*10)+j) id="yoquese">@Model.Panel_Parcial[i, j]</button>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="recuadro_pequeño">
+                                @using (Ajax.BeginForm("seleccionar", "controlbase", ajaxOptions))
+                                {
+
+                                    <button style="background-color: @Model.color[i,j]" class="relleno" type="submit" name="casilla" value=@((i*10)+j) id="yoquese">@Model.Panel_Parcial[i, j]</button>
+                                }
+                            </div>
+                        }
+
+                    }
+                </div>
+
+            }
+            else
+            {
+                <div class="barra_contenedora">
+                    @for (int j = 0; j < 9; j++)
+                    {
+                        if (((j + 1) % 3) == 0)
+                        {
+                            <div class="recuadro_pequeño tercero">
+                                @using (Ajax.BeginForm("seleccionar", "controlbase", ajaxOptions))
+                                {
+
+                                    <button style="background-color: @Model.color[i,j]" class="relleno" font-size: 100%;" type="submit" name="casilla" value=@((i*10)+j) id="yoquese">@Model.Panel_Parcial[i, j]</button>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="recuadro_pequeño">
+                                @using (Ajax.BeginForm("seleccionar", "controlbase", ajaxOptions))
+                                {
+                                    <button style="background-color: @Model.color[i,j]" class="relleno" type="submit" name="casilla" value=@((i*10)+j) id="yoquese">@Model.Panel_Parcial[i, j]</button>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+
+            }
+
+        }
+    }
+</div>

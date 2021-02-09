@@ -1,0 +1,150 @@
+﻿@model PaginaDeSudoku.Models.Sudoku
+
+@{
+    Layout = "~/Views/Shared/_layout.cshtml";
+    AjaxOptions ajaxOptions = new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "yoquese"
+    };
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PanelGrande</title>
+    <link rel="stylesheet" href="~/hojadeestilos.css">
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    
+    <script src="~/Scripts/jquery-1.8.0.min.js"></script>
+    
+</head>
+<body>
+    <div class="text-center">
+    <div style="height: 600px; width: 1260px; background-color: green;">
+        <div style="height: 580px; width: 60px; background-color: indigo; float: left; padding: 10px;">
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=1>1</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=2>2</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=3>3</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=4>4</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=5>5</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=6>6</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=7>7</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=8>8</button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px;" class="relleno" name="casilla" value=9>9   </button>
+                }
+            </div>
+            <div class="numericos">
+                @using (Ajax.BeginForm("colocar", "controlbase", ajaxOptions))
+                {
+                    <button style="height:48px; padding-right:8px; padding-top:8px;" class="relleno" name="casilla" value=0><img style="height:40px; width:40px;" src="~/images/goma.png" alt="goma" /></button>
+                }
+
+            </div>
+        </div>
+        <div>
+            <div class="caja_contenedora" id="yoquese" style="margin-top: 5px;">
+                @Html.Partial("~/Views/Sudoku/PanelSudoku.cshtml", Model)
+            </div>
+        </div>
+
+        <div style="width: 539px; height: 600px; background-color: maroon; float: left;">
+            <div style="width: 50%; height: 15%; background-color: blueviolet; margin: 10px;">
+                @using (Ajax.BeginForm("generarpanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="float: left;  margin-top: 9px;" value=2>generar</button>
+                }
+                @using (Ajax.BeginForm("recargarelpanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="margin-left:43px; margin-right:23px;  margin-top: 9px; float: left;"> colocar</button>
+                }
+
+                @using (Ajax.BeginForm("borrarPanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="float: left;  margin-top: 9px;">borrar</button>
+                }
+
+
+                <div>@Model.seleccion_i</div>
+                <div>@Model.seleccion_j</div>
+
+            </div>
+            <div>
+                @using (Ajax.BeginForm("generarpanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="float: left;  margin-top: 9px;" name="eliminados"value=25>Facil</button>
+                }
+                @using (Ajax.BeginForm("generarpanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="float: left;  margin-top: 9px;" name="eliminados" value=40>Medio</button>
+                }
+                @using (Ajax.BeginForm("generarpanel", "controlbase", ajaxOptions))
+                {
+                    <button type="submit" style="float: left;  margin-top: 9px;" name="eliminados" value=55>Dificil</button>
+                }
+            </div>
+            <div id="yoquese">
+                @{
+                    if (Model.victoria(Model))
+                    {
+
+                        <h1 id="yoquese">Felicidades!</h1>
+                    }
+                }
+            </div>
+            
+            @using (Ajax.BeginForm("aver", "controlbase", ajaxOptions))
+            {
+                
+                <button  id="yoquese">@Model.veces</button>
+            }
+
+        </div>
+</body>
+</html>
