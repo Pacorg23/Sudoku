@@ -1,2 +1,3 @@
-# Sudoku
-Este repositorio contiene un programa que genera numeros del 1 al 9 en un panel de 9x9 y que cumple con las reglas del sudoku.
+# Pagina para Sudoku
+Esta rama tiene la implementacion del sudoku en una pagina web usando asp .net MVC y ajax
+
